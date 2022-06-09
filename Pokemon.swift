@@ -8,9 +8,9 @@
 import Foundation
 class myPokemon{
     //initialize elements
-    var name: String
-    var hp: Int
-    var alive = true
+    private var name: String
+    private var hp: Int
+    private var alive = true
     init(name: String, hp: Int){
         self.name = name
         self.hp = hp
