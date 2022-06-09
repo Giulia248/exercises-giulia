@@ -170,3 +170,40 @@ func longestString(mat: [[String]]) -> String{
     }
     return longest
 }
+
+/*
+ int matrice interi output bool
+ true: moltiplicazione di una riga = moltiplicazione colonna
+ */
+func mat(y: Int, x: Int) -> [[Int]]{
+    var mat: [[Int]] = Array(repeating: Array(repeating: 0, count: x), count: y)
+    for indexa in 0...y - 1{
+        for indexb in 0...x - 1{
+            mat[indexa][indexb] = Int.random(in: 1...4)
+        }
+    }
+    return mat
+}
+func moltMat(mat: [[Int]], y: Int, x: Int) -> Bool{
+    var check = false
+    var molti = 1
+    var molti2 = 1
+    for _ in 0..<y * x{
+        
+       
+            for xx in 0..<x{
+                molti *= mat[0][xx]
+            }
+            for yy in 0..<y{
+                molti2 *= mat[yy][0]
+            }
+            
+    }
+    if molti == molti2 {
+        check = true
+    
+    }
+    molti = 1
+    molti2 = 1
+    return check
+}
