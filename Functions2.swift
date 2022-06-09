@@ -170,19 +170,3 @@ func longestString(mat: [[String]]) -> String{
     }
     return longest
 }
-/*
- Data una matrice e un numero n determinare che esistano due numeri nella matrice tali per cui il loro prodotto da come risultato il numero n
- es. (1, 3, 4) (5, 3, 2)  n=12 -----> (3,4)
- */
-func genMat () -> [[Int]]{
-    var mat: [[Int]] = Array(repeating: Array(repeating: 0, count: 3), count: 2)
-    for y in 0...1{
-        for x in 0...2{
-            mat[y][x] = Int.random(in: 0...4)
-        }
-    }
-    return mat
-}
-func molt (mat: [[Int]], num: Int) -> String{
-    
-}
